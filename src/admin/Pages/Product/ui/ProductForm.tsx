@@ -2,7 +2,7 @@ import { Button } from "@/components/ui/button";
 import type { Product, Size } from "@/interfaces/product.interface";
 import { X, SaveAll, Tag, Plus, Upload } from "lucide-react";
 import React, { useEffect, useRef, useState } from "react";
-import { Link, useParams } from "react-router";
+import { Link } from "react-router";
 import { useForm } from "react-hook-form";
 import { cn } from "@/lib/utils";
 
@@ -20,13 +20,12 @@ interface FormInputs extends Product{
 const avilableSizes: Size[] = [ 'XS', 'S', 'M', 'L', 'XL', 'XXL', ];
 
 
-export const ProductForm = ({title, subTitle, product, onSubmit, isPosting}: Props)  => {
+export const ProductForm = ({product, onSubmit, isPosting}: Props)  => {
 
   const {register, handleSubmit, formState: {errors}, getValues, setValue, watch }  = useForm<FormInputs>({
     defaultValues: product,
   })
 
-  const [newTag, setNewTag] = useState('');
   const [dragActive, setDragActive] = useState(false);
   const labelInputRef = useRef<HTMLInputElement>(null)
   const [files, setFiles] = useState<File[]>([])
@@ -123,7 +122,7 @@ export const ProductForm = ({title, subTitle, product, onSubmit, isPosting}: Pro
 
         <div className="mb-8">
             <h1 className="text-2xl font-bold text-gray-900 mb-2">
-              {'Productp'}
+              {title
             </h1>
             
         </div>

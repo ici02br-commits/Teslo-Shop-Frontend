@@ -1,4 +1,3 @@
-import { axiosApi } from "@/api/tesloApi"
 import { useZustandAuth } from "@/auth/zustand/auth.zustand"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
@@ -42,7 +41,7 @@ const LoginPage =()=> {
   const [password, setPassword] = useState("")
   const [isLoading, setIsLoading] = useState(false)
   const navigate = useNavigate()
-  const {login,token,user} = useZustandAuth()
+  const {login} = useZustandAuth()
 
 
   /*const handleSubmit = async (e: React.FormEvent) => {
@@ -61,7 +60,6 @@ const LoginPage =()=> {
   const handleLogin = async(e:SubmitEvent<HTMLFormElement>)=>{
     e.preventDefault()
     setIsLoading(true)
-    const formData = new FormData(e.target as HTMLFormElement)
     
 
       const isValid = await login(email,password)

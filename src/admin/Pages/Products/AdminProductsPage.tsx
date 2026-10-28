@@ -1,10 +1,9 @@
 import { CustomPagination } from "@/components/custom/CustomPagination"
 import { Button } from "@/components/ui/button"
 import {  TableCaption,  TableHeader,  TableRow,  TableHead,  TableBody,  TableCell,  TableFooter, Table } from "@/components/ui/table"
-import { products } from "@/dataTemporal/products.temp"
 import useProducts from "@/shop/hooks/useProducts"
 import { PencilIcon, PlusIcon } from "lucide-react"
-import { Link, Links } from "react-router"
+import { Link } from "react-router"
 
 
 

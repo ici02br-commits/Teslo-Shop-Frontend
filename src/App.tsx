@@ -16,7 +16,7 @@ function App() {
 
     const {checkAuthStatus} = useZustandAuth()
 
-    const {data} = useQuery({
+    useQuery({
       queryKey:['auth'],
       queryFn: checkAuthStatus,
       retry: false,

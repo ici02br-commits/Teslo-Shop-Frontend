@@ -45,7 +45,6 @@ const Register =()=> {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
         setIsLoading(true)
-    const formData = new FormData(e.target as HTMLFormElement)
     
 
       const isValid = await register(email,password, 'sadgsautyu')

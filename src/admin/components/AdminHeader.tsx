@@ -1,5 +1,5 @@
-import React, { useRef, type KeyboardEvent, type KeyboardEventHandler } from 'react';
-import { Search, Bell, MessageSquare, Settings, X } from 'lucide-react';
+import React, { useRef, type KeyboardEvent } from 'react';
+import { Search, Bell, MessageSquare, Settings } from 'lucide-react';
 import { useNavigate } from 'react-router';
 
 const AdminHeader: React.FC = () => {

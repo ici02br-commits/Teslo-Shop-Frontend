@@ -1,6 +1,5 @@
 import { axiosApi } from "@/api/tesloApi"
 import type { AuthResponse } from "@/auth/interfaces/auth.response"
-import { data } from "react-router"
 
  export const chechAuth = async():Promise<AuthResponse>=>{
     const token = localStorage.getItem('token')
