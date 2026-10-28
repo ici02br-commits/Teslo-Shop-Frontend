@@ -20,7 +20,7 @@ interface FormInputs extends Product{
 const avilableSizes: Size[] = [ 'XS', 'S', 'M', 'L', 'XL', 'XXL', ];
 
 
-export const ProductForm = ({product, onSubmit, isPosting}: Props)  => {
+export const ProductForm = ({title, product, onSubmit, isPosting}: Props)  => {
 
   const {register, handleSubmit, formState: {errors}, getValues, setValue, watch }  = useForm<FormInputs>({
     defaultValues: product,
@@ -122,7 +122,7 @@ export const ProductForm = ({product, onSubmit, isPosting}: Props)  => {
 
         <div className="mb-8">
             <h1 className="text-2xl font-bold text-gray-900 mb-2">
-              {title
+              {title}
             </h1>
             
         </div>
